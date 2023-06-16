@@ -1,0 +1,16 @@
+@import "../mixin";
+@import "../variables";
+
+.numb-wrap {
+	@include flex-column;
+	@include align-center;
+}
+
+.info {
+	@include font(500, 18px, 44px);
+}
+
+.numb {
+	@include font(500, 32px, 60px);
+	color: $main-color;
+}

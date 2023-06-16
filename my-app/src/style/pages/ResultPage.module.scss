@@ -1,0 +1,14 @@
+@import "../mixin";
+
+.title {
+	@include font(700, 46px, 50px);
+	margin-top: 100px;
+}
+
+.result-group {
+	margin: 80px 0;
+	@include flex-row;
+	& div:not(:last-child) {
+		margin-right: 50px;
+	}
+}

@@ -1,0 +1,121 @@
+// 폰트
+
+@mixin font($font-weight, $font-size, $line-height) {
+	font-family: "Spoqa Han Sans Neo", sans-serif;
+	font-weight: $font-weight;
+	font-size: $font-size;
+	line-height: $line-height;
+}
+
+//flex 컨테이너 디자인 믹스인
+
+@mixin flex-row() {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+}
+
+@mixin flex-column() {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+@mixin justify-start {
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+}
+
+@mixin justify-center {
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+@mixin justify-between {
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+@mixin justify-around {
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+}
+
+@mixin align-start {
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+}
+
+@mixin align-end {
+	-webkit-box-align: end;
+	-ms-flex-align: end;
+	align-items: flex-end;
+}
+
+@mixin align-center {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+@mixin align-between {
+	-webkit-box-align: space-between;
+	-ms-flex-align: space-between;
+	align-items: space-between;
+}
+
+// flex 아이템 디자인
+
+@mixin item-order-end {
+	-webkit-box-ordinal-group: 2;
+	-ms-flex-order: 1;
+	order: 1;
+}
+
+@mixin item-order-start {
+	-webkit-box-ordinal-group: 0;
+	-ms-flex-order: -1;
+	order: -1;
+}
+
+@mixin align-self-start {
+	-ms-flex-item-align: start;
+	align-self: flex-start;
+}
+
+@mixin align-self-end {
+	-ms-flex-item-align: end;
+	align-self: flex-end;
+}
+
+@mixin align-self-center {
+	-ms-flex-item-align: flex-center;
+	align-self: flex-center;
+}
+
+//버튼 믹스인
+
+@mixin btn-size($width, $line-height) {
+	font-family: "Spoqa Han Sans Neo", sans-serif;
+	border-radius: 20px;
+	width: $width;
+	line-height: $line-height;
+}
+
+@mixin btn-theme($bg-color, $text-color, $border, $border-color) {
+	background-color: $bg-color;
+	color: $text-color;
+	border: $border solid $border-color;
+}

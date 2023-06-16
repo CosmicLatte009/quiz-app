@@ -1,0 +1,36 @@
+@import "../mixin";
+@import "../variables";
+
+.input-wrap {
+	@include flex-row();
+	@include justify-center();
+	width: 322px;
+	border: 2px solid $deep-gray-color;
+	border-radius: 25px;
+	margin-bottom: 30px;
+}
+
+.input {
+	@include font(400, 16px, 55px);
+	text-align: center;
+
+	&::-webkit-input-placeholder {
+		color: $medium-gray-color;
+	}
+
+	&::-moz-placeholder {
+		color: $medium-gray-color;
+	}
+
+	&:-ms-input-placeholder {
+		color: $medium-gray-color;
+	}
+
+	&::-ms-input-placeholder {
+		color: $medium-gray-color;
+	}
+
+	&::placeholder {
+		color: $medium-gray-color;
+	}
+}
