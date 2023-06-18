@@ -1,13 +1,16 @@
+import { MouseEvent } from "react";
 import styles from "../style/components/Button.module.scss";
 
 interface MyProps {
 	children: string;
-	onClick: () => void;
+	isEnabled: boolean;
+	onClick: (event: MouseEvent<HTMLButtonElement>) => void;
 }
 
-const Button: React.FC<MyProps> = ({ children, onClick }) => {
+const Button: React.FC<MyProps> = ({ children, isEnabled, onClick }) => {
+	const btnClassName = isEnabled ? styles["btn-able"] : styles["btn-disabled"];
 	return (
-		<button className={styles.btn} onClick={onClick}>
+		<button className={btnClassName} onClick={onClick}>
 			{children}
 		</button>
 	);

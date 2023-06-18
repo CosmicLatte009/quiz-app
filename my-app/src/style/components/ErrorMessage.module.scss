@@ -1,0 +1,7 @@
+@import "../mixin";
+@import "../variables";
+
+.message {
+	color: $alert-color;
+	@include font(500, 14px, 22px);
+}

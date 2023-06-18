@@ -7,5 +7,25 @@
 
 .group {
 	margin: 80px 0;
+	height: 165px;
 	text-align: center;
+	position: relative;
+
+	& strong {
+		position: absolute;
+		left: 0;
+		right: 0;
+	}
+
+	& div {
+		position: relative;
+		top: 30px;
+	}
+
+	& button {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
 }
