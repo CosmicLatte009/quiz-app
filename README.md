@@ -110,6 +110,8 @@
     }
 ```
 
+`loading` state에 따라 로딩 메시지를 조건부로 렌더링하여, 데이터가 로딩 중일 때만 로딩 메시지가 나타나도록 한다. 불필요한 렌더링이 발생하지 않는다.
+
 ### 2. React.memo로 리렌더링 최적화
 
 </br>
@@ -117,3 +119,5 @@
 ```tsx
 export default React.memo(QuizPage);
 ```
+
+`React.memo`를 사용하여 QuizPage 컴포넌트를 감싸줌으로써, QuizPage 컴포넌트의 props가 변경되지 않는 한 리렌더링을 방지할 수 있다.
