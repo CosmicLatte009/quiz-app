@@ -35,7 +35,7 @@ const ResultPage: React.FC = () => {
 			<h1 className={styles.title}>결과</h1>
 			<section className={styles["result-group"]}>
 				<NumberText numb={formattedTime}>소요시간</NumberText>
-				<NumberText numb={correctAnswersCount}>정답개수</NumberText>
+				<NumberText numb={correctAnswersCount}>정답 수</NumberText>
 				<NumberText numb={incorrectAnswersCount}> 오답 수</NumberText>
 			</section>
 		</Wrap>
