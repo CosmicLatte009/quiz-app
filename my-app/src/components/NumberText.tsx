@@ -2,7 +2,7 @@ import styles from "../style/components/NumberText.module.scss";
 
 interface MyProps {
 	children: string;
-	numb: number;
+	numb: number | string;
 }
 
 const NumberText: React.FC<MyProps> = ({ children, numb }) => {

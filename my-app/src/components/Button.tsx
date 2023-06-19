@@ -3,12 +3,12 @@ import styles from "../style/components/Button.module.scss";
 
 interface MyProps {
 	children: string;
-	isEnabled: boolean;
+	className?: string;
 	onClick: (event: MouseEvent<HTMLButtonElement>) => void;
 }
 
-const Button: React.FC<MyProps> = ({ children, isEnabled, onClick }) => {
-	const btnClassName = isEnabled ? styles["btn-able"] : styles["btn-disabled"];
+const Button: React.FC<MyProps> = ({ children, className, onClick }) => {
+	const btnClassName = className ? `${styles[className]}` : styles.active;
 	return (
 		<button className={btnClassName} onClick={onClick}>
 			{children}

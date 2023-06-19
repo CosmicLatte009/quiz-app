@@ -1,14 +1,32 @@
 @import "../mixin";
 @import "../variables";
 
-.btn-able {
+%btn {
 	@include btn-size(322px, 44px);
-	@include btn-theme($main-color, #ffffff, 0, 0);
 	@include font(500, 16px, 44px);
 }
 
-.btn-disabled {
-	@include btn-size(322px, 44px);
+.active {
+	@extend %btn;
+	@include btn-theme($main-color, #ffffff, 0, 0);
+}
+
+.disabled {
+	@extend %btn;
 	@include btn-theme(lighten($main-color, 22%), #ffffff, 0, 0);
-	@include font(500, 16px, 44px);
+}
+
+.unselect {
+	@extend %btn;
+	@include btn-theme($medium-gray-color, #ffffff, 0, 0);
+}
+
+.correct {
+	@extend %btn;
+	@include btn-theme(#4cbb17, #ffffff, 0, 0);
+}
+
+.incorrect {
+	@extend %btn;
+	@include btn-theme($alert-color, #ffffff, 0, 0);
 }

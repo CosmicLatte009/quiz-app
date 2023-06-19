@@ -18,6 +18,7 @@ const HomePage: React.FC = () => {
 	const handleClickBtn = () => {
 		if (inputValue !== "") {
 			setShowErrorMessage(false);
+			localStorage.setItem("nickname", inputValue);
 			navigate({ pathname: "/quiz" });
 		} else {
 			setShowErrorMessage(true);
@@ -33,7 +34,7 @@ const HomePage: React.FC = () => {
 				) : null}
 				<Input onChange={handleInputChange} />
 				<Button
-					isEnabled={inputValue !== "" ? true : false}
+					className={inputValue !== "" ? "active" : "disabled"}
 					onClick={() => handleClickBtn()}
 				>
 					퀴즈 시작하기
