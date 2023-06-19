@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Wrap from "../components/Wrap";
 import Button from "../components/Button";
@@ -21,6 +21,7 @@ const QuizPage: React.FC = () => {
 	const [correctAnswersCount, setCorrectAnswersCount] = useState(0);
 	const [incorrectAnswersCount, setIncorrectAnswersCount] = useState(0);
 	const [startTime, setStartTime] = useState<Date | null>(null);
+	const [loading, setLoading] = useState(true); // 데이터 요청 성능 최적화용 state
 
 	const navigate = useNavigate();
 
@@ -80,6 +81,7 @@ const QuizPage: React.FC = () => {
 				const data = await response.json();
 				const resultData: Question[] = data.results;
 				setQuestionData(resultData);
+				setLoading(false); // 데이터 로딩 완료
 				setCurrentQuestionIndex(0);
 				setSelectedBtn(null);
 				setIsAnswerCorrect(false);
@@ -91,8 +93,8 @@ const QuizPage: React.FC = () => {
 		setStartTime(new Date());
 	}, [navigate]);
 
-	if (!currentQuestion) {
-		return <div>Loading...</div>;
+	if (loading) {
+		return <div>Loading...</div>; // 데이터 로딩 중 표시
 	}
 
 	const answerOptions: string[] = [
@@ -138,4 +140,4 @@ const QuizPage: React.FC = () => {
 	);
 };
 
-export default QuizPage;
+export default React.memo(QuizPage);

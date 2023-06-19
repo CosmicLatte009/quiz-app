@@ -29,6 +29,7 @@
 }
 
 .btn-next {
+	margin-top: 10px;
 	@include btn-size(322px, 50px);
 	@include font(500, 16px, 50px);
 	@include btn-theme($main-color, #ffffff, 0, 0);
