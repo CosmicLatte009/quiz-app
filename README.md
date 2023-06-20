@@ -50,7 +50,7 @@
 
 |                                                       퀴즈 풀기 전                                                       |                                                       오답 선택 시                                                       |                                                       정답 선택 시                                                       |
 | :----------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: |
-| <img width="300" src="https://github.com/CosmicLatte009/quiz-app/assets/87015026/45429a0a-49f2-4516-9fdc-1357a5a5681e"/> | <img width="300" src="https://github.com/CosmicLatte009/quiz-app/assets/87015026/d38273a8-2e77-405f-8db7-75ebedfe5a7e"/> | <img width="300" src="https://github.com/CosmicLatte009/quiz-app/assets/87015026/cd59b65d-4638-4f88-b377-f0b4dd44fbfb"/> |
+| <img width="300" src="https://github.com/CosmicLatte009/quiz-app/assets/87015026/45429a0a-49f2-4516-9fdc-1357a5a5681e"/> | <img width="300" src="https://github.com/CosmicLatte009/quiz-app/assets/87015026/cd59b65d-4638-4f88-b377-f0b4dd44fbfb"/> | <img width="300" src="https://github.com/CosmicLatte009/quiz-app/assets/87015026/d38273a8-2e77-405f-8db7-75ebedfe5a7e"/> | 
 
 <div align="left">
 
